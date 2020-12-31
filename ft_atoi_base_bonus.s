@@ -23,7 +23,9 @@ _ft_is_right_loop1:
 	je		_ft_is_right_ret_zero
 	cmp		byte[rdi + rdx], 0x2d ; -
 	je		_ft_is_right_ret_zero
+	mov		rax, rdi
 	push	rdi
+	mov		dil, byte[rax + rdx]
 	call	_ft_is_whitespace
 	pop		rdi
 	cmp		rax, 1

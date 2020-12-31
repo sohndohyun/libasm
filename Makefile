@@ -5,7 +5,12 @@ SRCS =	ft_strlen.s \
 		ft_strdup.s \
 		ft_write.s \
 		ft_read.s 
-SRCSB =	ft_atoi_base_bonus.s 
+SRCSB =	ft_atoi_base_bonus.s \
+		ft_list_push_front_bonus.s \
+		ft_list_size_bonus.s \
+		ft_list_sort_bonus.s \
+		ft_list_remove_if_bonus.s
+
 OBJS = $(SRCS:.s=.o)
 OBJSB = $(SRCSB:.s=.o)
 
@@ -26,6 +31,4 @@ fclean: clean
 	rm -f $(NAME)
 	rm -f a.out
 re: fclean all
-test: bonus
-	gcc main.c libasm.a
 .PHONY: all clean fclean re test
